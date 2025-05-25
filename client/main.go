@@ -11,12 +11,11 @@ import (
 
 func main() {
 	ctx := context.Background()
-	ctx, cancel := context.WithTimeout(ctx, time.Millisecond*50000)
+	ctx, cancel := context.WithTimeout(ctx, time.Millisecond*300)
 	defer cancel()
 
 	file, err := os.Create("arquivo.txt")
 
-	
 	if err != nil {
 		panic(err)
 	}
